@@ -4,12 +4,17 @@
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script>
+            function onSubmit() {
+              // Ocultar el bloqueo
+                document.getElementById("bloqueo").style.display = "none";
+            }
+        </script>
     </head>
     <body>
         <div id="bloqueo">
-            <form action="?" method="POST">
-                <div class="g-recaptcha" data-sitekey="6Lc0BwUmAAAAAAD35O1J3OK6n8fvGtyJDqTKmYFf"></div>
-                <input type="submit" value="Submit">
+            <form action="index.html">
+                <div class="g-recaptcha" data-sitekey="6Lc0BwUmAAAAAAD35O1J3OK6n8fvGtyJDqTKmYFf" data-callback="onSubmit"></div>
             </form>
         </div>
         <div id="ventprincipal">
