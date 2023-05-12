@@ -4,19 +4,19 @@
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+    <body>
+        <div id="bloqueo">
+            <form id="miFormulario" action="?" method="POST">
+                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY" data-callback="submitForm"></div>
+                <button type="submit" style="display: none;"></button>
+            </form>
+        </div>
         <script>
             function submitForm() {
                 document.getElementById("miFormulario").submit();
             }
         </script>
-    </head>
-    <body>
-        <div id="bloqueo">
-            <form id="miFormulario" action="mi-accion.php" method="POST">
-                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY" data-callback="submitForm"></div>
-                <button type="submit" style="display: none;"></button>
-            </form>
-        </div>
         <div id="ventprincipal">
             <div id="header">
                 <div style="text-align:center;">
