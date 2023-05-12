@@ -238,6 +238,11 @@ span{
     z-index: 9999;
 }
 
+.g-recaptcha {
+    width: 300px;
+    height: 200px;
+}
+
 @media(min-width:800px){
     #main{
         padding-left:5%;
