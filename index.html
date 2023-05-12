@@ -5,16 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script>
-            function desbloquearContenido() {
-                var bloqueo = document.getElementById('bloqueo');
-                bloqueo.style.display = 'none';
+            function submitForm() {
+                document.getElementById("miFormulario").submit();
             }
         </script>
     </head>
     <body>
         <div id="bloqueo">
-            <form>
-                <div class="g-recaptcha" data-sitekey="6Lc0BwUmAAAAAAD35O1J3OK6n8fvGtyJDqTKmYFf" data-callback="desbloquearContenido"></div>
+            <form id="miFormulario" action="mi-accion.php" method="POST">
+                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY" data-callback="submitForm"></div>
             </form>
         </div>
 
