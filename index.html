@@ -4,19 +4,20 @@
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script>
+            function desbloquearContenido() {
+                var bloqueo = document.getElementById('bloqueo');
+                bloqueo.style.display = 'none';
+            }
+        </script>
     </head>
     <body>
         <div id="bloqueo">
             <form action="?" method="POST">
-                <div class="g-recaptcha" data-sitekey="6Lc0BwUmAAAAAAD35O1J3OK6n8fvGtyJDqTKmYFf"></div>
-                <input type="submit" value="Submit" onclick="desbloquear()">
+                <div class="g-recaptcha" data-sitekey="6Lc0BwUmAAAAAAD35O1J3OK6n8fvGtyJDqTKmYFf" data-callback="desbloquearContenido"></div>
             </form>
         </div>
-        <script>
-            function desbloquear() {
-                document.getElementById('bloqueo').style.display = 'none';
-            }
-        </script>
+
         <div id="ventprincipal">
             <div id="header">
                 <div style="text-align:center;">
