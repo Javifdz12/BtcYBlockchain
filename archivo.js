@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const audio = document.getElementById("myAudio");
     const audio2 = document.getElementById("myAudio2");
 
+    document.getElementById("bloqueo").style.display = "none";
+
     boton.addEventListener("mouseover", function() {
         boton.style.backgroundColor = "red";
         if (validarFormulario2()) {
