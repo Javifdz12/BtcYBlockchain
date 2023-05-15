@@ -4,7 +4,12 @@
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        <script src="archivo.js"></script>
+        <script>
+            function onSubmit() {
+                // Ocultar el bloqueo
+                document.getElementById("bloqueo").style.display = "none";
+            }
+        </script>
     </head>
     <body>
         <div id="bloqueo">
